@@ -1,0 +1,32 @@
+/*Algoritmo que eleve un número a n potencia sin hacer uso de la librería math*/
+#include<stdio.h>
+#include<cstdlib>
+
+using namespace std;
+
+/*Función principal*/
+int main()
+{
+	/*Variables que nos servirán para hacer el cálculo:*/
+	int pot_base, pot_exp, res=1,aux,i;
+	
+	/*Pedir los números:*/
+	printf("Escribe el número que quieres elevar:_");
+	scanf("%i",&pot_base);
+	
+	printf("Escribe a cuánto lo quieres elevar:_");
+	scanf("%i",&pot_exp);
+	
+	i=0;
+	/*Ciclo que hará las iteraciones correspondientes:*/
+	while(i<pot_exp)
+	{
+		res=pot_base*res;
+		i++;
+	}
+	
+	printf("Resultado:_%i\n",res);
+	
+	system("pause");
+	return 0;
+}
